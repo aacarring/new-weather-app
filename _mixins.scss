@@ -1,0 +1,10 @@
+@mixin flexDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+$main-purple: #6B2D5C;
+$pale-blue: #E0FBFC;
+$deep-burgundy: #412234;

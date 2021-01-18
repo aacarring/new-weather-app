@@ -1,0 +1,51 @@
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: $main-purple;
+    width: 100vw;
+    height: 100vh;
+    @include flexDisplay();
+    .container {
+        @include flexDisplay();
+        width: 65vw;
+        height: 85vh;
+        background: $pale-blue;
+        color: $deep-burgundy;
+        border-radius: 15px;
+        header {
+            @include flexDisplay();
+            width: 55vw;
+            height: 5vh;
+            margin: 5vh;
+        }
+        .search-location {
+            @include flexDisplay();
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 55vw;
+            input {
+                min-width: 250px;
+                margin: 10px 10px;
+                outline: none;
+            }
+            button {
+                width: 50px;
+                margin: 10px 10px;
+                &:hover {
+                    cursor: pointer;
+
+                }
+            }
+        }
+        .weather {
+            margin: 5vh 0;
+            width: 55vw;
+            height: 50vh;
+        }
+    }
+}
