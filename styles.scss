@@ -36,15 +36,29 @@ body {
             }
             button {
                 width: 50px;
+                height: 30px;
                 margin: 10px 10px;
+                border-radius: 10px;
+                outline: none;
                 &:hover {
                     cursor: pointer;
-
+                    background: $main-purple;
+                    color: $pale-blue;
                 }
             }
         }
+        .weather-icon {
+            @include flexDisplay();
+            height: 30vh;
+            width: 30vw;
+            margin: 2.5vh;
+            i {
+                display: flex;
+                font-size: 10em;
+            }
+        }
         .weather {
-            margin: 5vh 0;
+            margin-bottom: 5vh;
             width: 55vw;
             height: 50vh;
             font-family: 'Gravitas One', cursive;

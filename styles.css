@@ -50,13 +50,31 @@ body .container .search-location input {
 }
 body .container .search-location button {
   width: 50px;
+  height: 30px;
   margin: 10px 10px;
+  border-radius: 10px;
+  outline: none;
 }
 body .container .search-location button:hover {
   cursor: pointer;
+  background: #6B2D5C;
+  color: #E0FBFC;
+}
+body .container .weather-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 30vw;
+  margin: 2.5vh;
+}
+body .container .weather-icon i {
+  display: flex;
+  font-size: 10em;
 }
 body .container .weather {
-  margin: 5vh 0;
+  margin-bottom: 5vh;
   width: 55vw;
   height: 50vh;
   font-family: "Gravitas One", cursive;
