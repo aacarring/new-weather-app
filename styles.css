@@ -30,8 +30,9 @@ body .container header {
   justify-content: center;
   align-items: center;
   width: 55vw;
-  height: 5vh;
-  margin: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+  font-family: "Gravitas One", cursive;
 }
 body .container .search-location {
   display: flex;
@@ -58,6 +59,30 @@ body .container .weather {
   margin: 5vh 0;
   width: 55vw;
   height: 50vh;
+  font-family: "Gravitas One", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .weather .temp,
+body .container .weather .description,
+body .container .weather .city {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+}
+body .container .weather .temp {
+  font-size: 2.75em;
+}
+body .container .weather .description {
+  text-transform: capitalize;
+  font-size: 1.25em;
+}
+body .container .weather .city {
+  font-size: 1.25em;
 }
 
 /*# sourceMappingURL=styles.css.map */

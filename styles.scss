@@ -20,8 +20,9 @@ body {
         header {
             @include flexDisplay();
             width: 55vw;
-            height: 5vh;
-            margin: 5vh;
+            margin-top: 10vh;
+            margin-bottom: 2vh;
+            font-family: 'Gravitas One', cursive;
         }
         .search-location {
             @include flexDisplay();
@@ -46,6 +47,24 @@ body {
             margin: 5vh 0;
             width: 55vw;
             height: 50vh;
+            font-family: 'Gravitas One', cursive;
+            @include flexDisplay();
+            .temp,
+            .description,
+            .city {
+                @include flexDisplay();
+                margin: 2vh;
+            }
+            .temp {
+                font-size: 2.75em;
+            }
+            .description {
+                text-transform: capitalize;
+                font-size: 1.25em;
+            }
+            .city {
+                font-size: 1.25em;
+            }
         }
     }
 }
