@@ -1,9 +1,12 @@
 const cityInput = document.querySelector('.container .search-location input');
 const findButton = document.querySelector('.container .search-location .find-weather');
-const forecastContainer = document.querySelector('.container .weather')
+const forecastContainer = document.querySelector('.container .weather');
+const weatherIcon = document.querySelector('.container .weather-icon');
 
 function findWeather() {
+    //clear previous city's weather info
     forecastContainer.innerHTML = "";
+    weatherIcon.innerHTML = "";
 
     let cityName = cityInput.value;
     let API_key = 'c636bf9dabdbd12b76b9ca1995f40721';
@@ -29,6 +32,18 @@ function findWeather() {
         `
 
         forecastContainer.appendChild(forecast);
+
+        if (data.weather[0].main === "Clouds") {
+            weatherIcon.innerHTML += ` <i class="fas fa-cloud"></i>`;
+        } else if (data.weather[0].main === "Rain") {
+            weatherIcon.innerHTML += ` <i class="fas fa-cloud-rain"></i>`;
+        } else if (data.weather[0].main === "Snow") {
+            weatherIcon.innerHTML += ` <i class="far fa-snowflake"></i>`;
+        } else if (data.weather[0].main === "Clear") {
+            weatherIcon.innerHTML += ` <i class="fas fa-sun"></i>`;
+        } else if (data.weather[0].main === "Thunderstorm") {
+            weatherIcon.innerHTML += ` <i class="fas fa-bolt"></i>`;
+        }
     });
     cityInput.value = "";;
 }
