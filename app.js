@@ -16,7 +16,6 @@ function findWeather() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${API_key}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
         if (data.cod === '404') {
             alert("Hmm, we can't find a city with that name...");
         }
