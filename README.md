@@ -1,0 +1,1 @@
+A weather app built with HTML, SCSS, and JavaScript using the Open Weather Map API. This app provides functionality to search for weather by city name, and if the search is successful, provides an icon depicting the weather conditions, the temperature in Fahrenheit, a brief description of the weather, and the city and country name.
