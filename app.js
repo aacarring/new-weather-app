@@ -19,7 +19,7 @@ function findWeather() {
         if (data.cod === '404') {
             alert("Hmm, we can't find a city with that name...");
         }
-
+        
         let temp = data.main.temp.toFixed(0);
         let description = data.weather[0].description;
         let city = data.name;
