@@ -37,7 +37,7 @@ function findWeather() {
 
         if (data.weather[0].main === "Clouds") {
             weatherIcon.innerHTML += ` <i class="fas fa-cloud"></i>`;
-        } else if (data.weather[0].main === "Rain") {
+        } else if (data.weather[0].main === "Rain" || data.weather[0].main === "Drizzle") {
             weatherIcon.innerHTML += ` <i class="fas fa-cloud-rain"></i>`;
         } else if (data.weather[0].main === "Snow") {
             weatherIcon.innerHTML += ` <i class="far fa-snowflake"></i>`;
@@ -45,7 +45,7 @@ function findWeather() {
             weatherIcon.innerHTML += ` <i class="fas fa-sun"></i>`;
         } else if (data.weather[0].main === "Thunderstorm") {
             weatherIcon.innerHTML += ` <i class="fas fa-bolt"></i>`;
-        } else if (data.weather[0].main === "Smoke") {
+        } else if (data.weather[0].main === "Smoke" || data.weather[0].main === "Mist" || data.weather[0].main === "Haze" || data.weather[0].main === "Fog" || data.weather[0].main === "Dust" || data.weather[0].main === "Ash" || data.weather[0].main === "Sand") {
             weatherIcon.innerHTML += ` <i class="fas fa-smog"></i>`;
         }
     });
