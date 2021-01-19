@@ -49,12 +49,16 @@ body {
         }
         .weather-icon {
             @include flexDisplay();
-            height: 30vh;
+            height: 40vh;
             width: 30vw;
             margin: 2.5vh;
+            img {
+                width: 100%;;
+                height: 100%;
+            }
             i {
                 display: flex;
-                font-size: 10em;
+                font-size: 7.5em;
             }
         }
         .weather {

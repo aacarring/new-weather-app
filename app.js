@@ -2,9 +2,11 @@ const cityInput = document.querySelector('.container .search-location input');
 const findButton = document.querySelector('.container .search-location .find-weather');
 const forecastContainer = document.querySelector('.container .weather');
 const weatherIcon = document.querySelector('.container .weather-icon');
+const weatherImg = document.querySelector('.container .weather-icon img');
 
 function findWeather() {
     //clear previous city's weather info
+    weatherImg.remove();
     forecastContainer.innerHTML = "";
     weatherIcon.innerHTML = "";
 
