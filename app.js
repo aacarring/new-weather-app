@@ -16,10 +16,11 @@ function findWeather() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${API_key}`)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
         if (data.cod === '404') {
             alert("Hmm, we can't find a city with that name...");
         }
-        
+
         let temp = data.main.temp.toFixed(0);
         let description = data.weather[0].description;
         let city = data.name;
@@ -44,6 +45,8 @@ function findWeather() {
             weatherIcon.innerHTML += ` <i class="fas fa-sun"></i>`;
         } else if (data.weather[0].main === "Thunderstorm") {
             weatherIcon.innerHTML += ` <i class="fas fa-bolt"></i>`;
+        } else if (data.weather[0].main === "Smoke") {
+            weatherIcon.innerHTML += ` <i class="fas fa-smog"></i>`;
         }
     });
     cityInput.value = "";;
