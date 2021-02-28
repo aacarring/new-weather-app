@@ -44,15 +44,16 @@ body {
                 width: 50px;
                 height: 25px;
                 margin: 5px 10px;
+                border: none;
                 border-radius: 10px;
                 outline: none;
-                border: 2px solid black;
-                color: $deep-grey;
-                background: $pale-blue;
+                background: $deep-grey;
+                color: $pale-blue;
                 &:hover {
                     cursor: pointer;
-                    color: $pale-blue;
                     background: $deep-grey;
+                    color: white;
+                    transform: scale(1.05);
                 }
             }
         }

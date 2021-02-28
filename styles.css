@@ -58,17 +58,17 @@ body .container .search-location button {
   width: 50px;
   height: 25px;
   margin: 5px 10px;
+  border: none;
   border-radius: 10px;
   outline: none;
-  font-weight: bold;
-  border: 2px solid black;
-  color: #50586C;
-  background: #DCE2F0;
+  background: #50586C;
+  color: #DCE2F0;
 }
 body .container .search-location button:hover {
   cursor: pointer;
-  color: #DCE2F0;
   background: #50586C;
+  color: white;
+  transform: scale(1.05);
 }
 body .container .weather-icon {
   display: flex;
