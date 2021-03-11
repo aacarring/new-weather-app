@@ -12,7 +12,9 @@ function findWeather() {
 
     let cityName = cityInput.value;
     let API_key = 'c636bf9dabdbd12b76b9ca1995f40721';
-    if (cityName === "") return;
+    if (cityName === "") {
+        alert("Please enter a city in the input field to see the weather.");
+    };
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${API_key}`)
         .then(response => response.json())
         .then(data => {
@@ -52,3 +54,8 @@ function findWeather() {
 }
 
 findButton.addEventListener('click', findWeather);
+document.onkeydown = function(event) {
+    if (event.keyCode == 13) {
+        findWeather();
+    }
+}
