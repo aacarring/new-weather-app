@@ -6,7 +6,6 @@ const weatherImg = document.querySelector('.container .weather-icon img');
 
 function findWeather() {
     //clear previous city's weather info
-    weatherImg.remove();
     forecastContainer.innerHTML = "";
     weatherIcon.innerHTML = "";
 
